@@ -39,4 +39,50 @@ public class Book{
     }
 }
 ```
+```java
+public class Main {
+    public static void main(String[] args) {
+        var child = new Child("Nelli", 2, "blonde", true);
 
+        System.out.println(child.name);
+        System.out.println(child.age);
+        System.out.println(child.hairColour);
+        System.out.println(child.isGirl);
+
+        var child2 = new Child("Ralf", 0, "blonde", false);
+        System.out.println(child2.name);
+        System.out.println(child2.age);
+        System.out.println(child2.hairColour);
+        System.out.println(child2.isGirl);
+    }
+}
+
+//-------------------
+public class Child {
+  
+    public String name;
+    public int age;
+    public String hairColour;
+    public boolean isGirl;
+  
+
+  public Child(String name, int age, String hairColour, boolean isGirl) {
+    this.name = name;
+    this.age = age;
+    this.hairColour = hairColour;
+    this.isGirl = isGirl;
+    
+  }
+    
+  public Child() {
+    this.name = "";
+    this.age = 0;
+    this.hairColour = "";
+    this.isGirl = false;
+
+    
+    
+  }
+}
+
+```
