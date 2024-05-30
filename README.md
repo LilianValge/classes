@@ -165,4 +165,35 @@ public class Fork {
 }
 
 ```
+```java
+public class Main {
+    public static void main(String[] args) {
+        var cake = new Cake(12, "Cheesecake");
 
+        System.out.println("I have " + cake.type + " in my fridge waiting for me. In total it is divided in " +  cake.slices + " slices and one slice will be eaten in " + cake.biteCount + " bites.");
+
+
+
+        for(int i = 0; i < 7; i++){
+            cake.bites();
+        }
+        System.out.println("After I have taken 7 bites of one slice, there will be only " + cake.biteCount + " bite left" );
+    }
+}
+
+public class Cake {
+  public int slices;
+  public String type;
+  public int biteCount = 8;
+
+  public Cake(int slices, String type) {
+    this.slices = slices;
+    this.type = type;
+ 
+  }
+
+  public void bites() {
+    biteCount = biteCount - 1;
+  }
+}
+```
